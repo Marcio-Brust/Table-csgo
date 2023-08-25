@@ -96,21 +96,23 @@ export const Table = () => {
                 key={data.user}
                 onClick={(e) => {
                   const td = Array.from(e.currentTarget.querySelectorAll("td"));
-                  const Arraytd = td.map((item) => item.innerHTML);
-                  SetModalProp({
-                    img: Arraytd[0]
-                      .replace('<img src="', "")
-                      .replace('" alt="img">', ""),
-                    name: Arraytd[1],
-                    victories: Arraytd[2],
-                    kill: Arraytd[3],
-                    death: Arraytd[4],
-                    assists: Arraytd[5],
-                    assistsflash: Arraytd[6],
-                    total_rounds_played: Arraytd[7],
-                    rating: Arraytd[8],
-                  });
-                  setOpen(!open);
+                  const Arraytd = td.map((item) => item);
+                  if (e.target === Arraytd[1]) {
+                    SetModalProp({
+                      img: Arraytd[0].innerHTML
+                        .replace('<img src="', "")
+                        .replace('" alt="img">', ""),
+                      name: Arraytd[1].innerHTML,
+                      victories: Arraytd[2].innerHTML,
+                      kill: Arraytd[3].innerHTML,
+                      death: Arraytd[4].innerHTML,
+                      assists: Arraytd[5].innerHTML,
+                      assistsflash: Arraytd[6].innerHTML,
+                      total_rounds_played: Arraytd[7].innerHTML,
+                      rating: Arraytd[8].innerHTML,
+                    });
+                    setOpen(!open);
+                  }
                 }}
               >
                 <TrStyled index={index}>
