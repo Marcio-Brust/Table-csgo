@@ -43,7 +43,7 @@ interface ModalProps {
 export const Table = () => {
   const [open, setOpen] = useState(false);
   const [modalProp, SetModalProp] = useState<ModalProps>();
-  console.log(modalProp?.img);
+
   const [search, setSearch] = useState("");
   const filteredRepos =
     search.length > 0 ? Data.filter((data) => data.user.includes(search)) : [];
