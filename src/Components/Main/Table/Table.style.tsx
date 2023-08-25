@@ -9,6 +9,7 @@ export const TableStyled = styled.table`
   border-collapse: collapse;
   letter-spacing: 0.07rem;
   color: #c1c0c0;
+  margin-top: 30px;
 
   img {
     width: 20px;
@@ -23,6 +24,7 @@ export const TableStyled = styled.table`
       padding: 10px;
       font-size: 1rem;
       font-weight: 400;
+      color: #161415;
 
       div {
         display: flex;
@@ -48,8 +50,6 @@ export const TrStyled = styled.tr<TableProps>`
 `;
 
 export const DivModal = styled.div`
-  box-sizing: border-box;
-  font-family: "Kanit", sans-serif;
   width: 100%;
   height: 300px;
   letter-spacing: 0.07rem;
@@ -68,6 +68,7 @@ export const DivModal = styled.div`
     gap: 10px;
     font-size: 0.95rem;
     font-weight: 800;
+    padding: 5px;
   }
   span {
     font-weight: 200;
@@ -85,8 +86,6 @@ export const DivModal = styled.div`
 `;
 
 export const DivModalRating = styled.div`
-  box-sizing: border-box;
-  font-family: "Kanit", sans-serif;
   letter-spacing: 0.07rem;
   font-weight: 800;
   width: 150px;

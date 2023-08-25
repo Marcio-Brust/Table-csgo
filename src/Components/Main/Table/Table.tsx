@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { DivModal, DivModalRating, TableStyled, TrStyled } from "./Table.style";
-import { Data } from "../../ApiFake/ApiFake";
-import ak47 from "../../assets/image/ak-47.png";
-import crosshair from "../../assets/image/crosshair.png";
-import flash from "../../assets/image/flashbang.png";
-import skull from "../../assets/image/skull.png";
-import target from "../../assets/image/target.png";
-import trophy from "../../assets/image/trophy.png";
-import eu from "../../assets/image/WhatsApp Image 2023-08-23 at 19.44.26.jpeg";
-import fraterb from "../../assets/image/8142c750135a0999440049cec115651d.png";
+import { Data } from "../../../ApiFake/ApiFake";
+import ak47 from "../../../assets/image/ak-47.png";
+import crosshair from "../../../assets/image/crosshair.png";
+import flash from "../../../assets/image/flashbang.png";
+import skull from "../../../assets/image/skull.png";
+import target from "../../../assets/image/target.png";
+import trophy from "../../../assets/image/trophy.png";
+import eu from "../../../assets/image/WhatsApp Image 2023-08-23 at 19.44.26.jpeg";
+/* import fraterb from "../../assets/image/8142c750135a0999440049cec115651d.png"; */
 import { Box, Modal } from "@mui/material";
 
 const style = {
@@ -20,7 +20,6 @@ const style = {
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 0,
-  fontFamily: '"Anek Malayalam", sans-serif',
   background: "#0480bd",
 };
 
@@ -39,8 +38,8 @@ interface ModalProps {
 export const Table = () => {
   const [open, setOpen] = useState(false);
   const [modalProp, SetModalProp] = useState<ModalProps>();
-
   const [search, setSearch] = useState("");
+
   const filteredRepos =
     search.length > 0 ? Data.filter((data) => data.user.includes(search)) : [];
 
@@ -203,27 +202,14 @@ export const Table = () => {
             <div
               style={{
                 display: "flex",
-                justifyContent: "space-between",
+                justifyContent: "center",
                 width: "100%",
                 background: "#161415",
                 textAlign: "center",
                 color: "#c1c0c0",
               }}
             >
-              <img
-                style={{ width: "50px", objectFit: "contain" }}
-                src={fraterb}
-                alt=""
-              />{" "}
               <h1>👑 {modalProp?.name}</h1>
-              <img
-                style={{
-                  width: "50px",
-                  objectFit: "contain",
-                }}
-                src={fraterb}
-                alt=""
-              />
             </div>
             <DivModal>
               <section>
@@ -260,29 +246,19 @@ export const Table = () => {
             <div
               style={{
                 display: "flex",
-                justifyContent: "space-between",
+                justifyContent: "center",
                 width: "100%",
                 background: "#161415",
-                textAlign: "center",
+
                 color: "#c1c0c0",
               }}
             >
-              <img
-                style={{ width: "50px", objectFit: "contain" }}
-                src={fraterb}
-                alt=""
-              />
               <h1>
                 🚀 Total de rounds jogados:{" "}
                 <span style={{ fontWeight: "400" }}>
                   {modalProp?.total_rounds_played}
                 </span>
               </h1>
-              <img
-                style={{ width: "50px", objectFit: "contain" }}
-                src={fraterb}
-                alt=""
-              />
             </div>
           </Box>
         </Modal>

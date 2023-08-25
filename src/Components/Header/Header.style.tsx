@@ -1,0 +1,41 @@
+import styled from "styled-components";
+
+export const HeaderStyled = styled.header`
+  background: #161415;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+
+  button {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    transition: 0.5s;
+
+    a {
+      display: flex;
+      padding: 20px 30px;
+      color: #c1c0c0;
+      font-weight: 700;
+      transition: 0.5s;
+
+      &:hover::after {
+        content: "";
+        position: absolute;
+        display: block;
+        margin-left: -15px;
+        margin-top: 7px;
+        width: 8px;
+        height: 8px;
+        background: #0480bd;
+      }
+    }
+  }
+
+  img {
+    width: 100px;
+  }
+`;

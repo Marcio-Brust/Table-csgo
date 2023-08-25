@@ -1,5 +1,4 @@
-
-import { Table } from "../Table";
+import { Table } from "./Table/Table";
 import { Mainstyled } from "./Main.style";
 
 const Main = () => {

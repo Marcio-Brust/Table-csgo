@@ -1,11 +1,14 @@
-import Main from "./Components/Table/Main/Main";
+import { Footer } from "./Components/Footer/Footer";
+import { Header } from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
 
 function App() {
   return (
-    <div>
-      <h1>Home</h1>
+    <>
+      <Header />
       <Main />
-    </div>
+      <Footer />
+    </>
   );
 }
 
