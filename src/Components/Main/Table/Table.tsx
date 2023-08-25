@@ -16,6 +16,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
+  width: 800,
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 0,
@@ -134,6 +135,10 @@ export const Table = () => {
                   <td>{data.deaths}</td>
                   <td>{data.assists}</td>
                   <td>{data.flashbang_assists}</td>
+                  <td style={{ display: "none" }}>
+                    {data.total_rounds_played}
+                  </td>
+                  <td style={{ display: "none" }}>{data.rating}</td>
                 </TrStyled>
               </tbody>
             ))

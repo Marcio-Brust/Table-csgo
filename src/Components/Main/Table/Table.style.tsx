@@ -9,6 +9,7 @@ export const TableStyled = styled.table`
   border-collapse: collapse;
   letter-spacing: 0.07rem;
   color: #c1c0c0;
+  margin-top: 30px;
 
   img {
     width: 20px;
