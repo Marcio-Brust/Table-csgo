@@ -5,16 +5,25 @@ export const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 120px;
+  height: 100px;
 
   button {
     display: none;
   }
 
   nav {
+    margin: 0 auto;
     display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
     transition: 0.5s;
 
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     a {
       display: flex;
       padding: 20px 30px;

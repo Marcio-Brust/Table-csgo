@@ -79,4 +79,14 @@ export const Data = [
     total_rounds_played: 32,
     rating: 1.2,
   },
+  {
+    user: "Jota",
+    total_wins: 5,
+    kills: 20,
+    deaths: 18,
+    assists: 5,
+    flashbang_assists: 5,
+    total_rounds_played: 32,
+    rating: 1.2,
+  },
 ];

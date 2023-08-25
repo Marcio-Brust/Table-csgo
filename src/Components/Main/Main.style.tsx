@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 export const Mainstyled = styled.main`
-  background: #f1f1f1;
   display: grid;
   justify-content: center;
+  align-items: start;
+  width: 100%;
   padding: 30px;
+  min-height: 500px;
   font-family: "Anek Malayalam", sans-serif;
-  height: 100%;
 
   input {
     border: none;
     padding: 10px;
     cursor: pointer;
     width: 300px;
+
     border: solid 2px transparent;
     border-radius: 5px;
     font-size: 1rem;

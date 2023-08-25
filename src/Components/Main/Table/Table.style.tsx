@@ -9,7 +9,6 @@ export const TableStyled = styled.table`
   border-collapse: collapse;
   letter-spacing: 0.07rem;
   color: #c1c0c0;
-  margin-top: 30px;
 
   img {
     width: 20px;
@@ -23,7 +22,7 @@ export const TableStyled = styled.table`
       text-align: left;
       padding: 10px;
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 800;
       color: #161415;
 
       div {
@@ -43,7 +42,7 @@ export const TableStyled = styled.table`
 
 export const TrStyled = styled.tr<TableProps>`
   background: ${({ index }) => (index % 2 === 0 ? "#161415" : "#0480bd")};
-
+  opacity: 0.9;
   &:hover {
     background: #3f626d;
   }
@@ -55,6 +54,7 @@ export const DivModal = styled.div`
   letter-spacing: 0.07rem;
   color: #c1c0c0;
   display: flex;
+
   justify-content: space-around;
   align-items: center;
   padding: 20px;
