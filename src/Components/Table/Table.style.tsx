@@ -43,7 +43,7 @@ export const TrStyled = styled.tr<TableProps>`
   background: ${({ index }) => (index % 2 === 0 ? "#161415" : "#0480bd")};
 
   &:hover {
-    background: #04aee1;
+    background: #3f626d;
   }
 `;
 
