@@ -44,3 +44,46 @@ export const TrStyled = styled.tr<TableProps>`
     background: #07032a;
   }
 `;
+
+export const DivModal = styled.div`
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  width: 300px;
+  letter-spacing: 0.07rem;
+  color: #f1f1f1;
+
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  div {
+    display: grid;
+
+    img {
+      width: 20px;
+    }
+  }
+`;
+
+export const DivModalRating = styled.div`
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 0.07rem;
+  color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+
+  img {
+    width: 200px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+`;
