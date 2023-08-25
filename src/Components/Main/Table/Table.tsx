@@ -51,7 +51,13 @@ export const Table = () => {
           name="seatch"
           placeholder="Buscar..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) =>
+            setSearch(
+              e.target.value.length <= 1
+                ? e.target.value.toLocaleUpperCase()
+                : e.target.value
+            )
+          }
         />
       </div>
       <TableStyled>
@@ -130,7 +136,7 @@ export const Table = () => {
                       cursor: "pointer",
                     }}
                   >
-                    {data.user}
+                    {data.user.toLocaleUpperCase()}
                   </td>
                   <td>{data.total_wins}</td>
                   <td>{data.kills}</td>
@@ -183,7 +189,7 @@ export const Table = () => {
                       cursor: "pointer",
                     }}
                   >
-                    {data.user}
+                    {data.user.toLocaleUpperCase()}
                   </td>
                   <td>{data.total_wins}</td>
                   <td>{data.kills}</td>
