@@ -10,6 +10,7 @@ export const TableStyled = styled.table`
   letter-spacing: 0.07rem;
   color: #c1c0c0;
   margin-top: 30px;
+  width: 100%;
 
   img {
     width: 20px;
