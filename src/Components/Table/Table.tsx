@@ -16,16 +16,12 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 850,
+  width: 800,
   bgcolor: "background.paper",
-  border: "2px solid #07032a",
   boxShadow: 24,
-  p: 4,
-  display: "flex",
-  alignItems: "center",
-  gap: 5,
-
-  background: "linear-gradient(120deg,#00adee 30%,#000)",
+  p: 0,
+  fontFamily: '"Anek Malayalam", sans-serif',
+  background: "#0480bd",
 };
 
 interface ModalProps {
@@ -64,22 +60,34 @@ export const Table = () => {
           <tr>
             <th></th>
             <th>
-              <img src={target} alt="player" /> Jogador
+              <div>
+                <img src={target} alt="player" /> Jogador
+              </div>
             </th>
             <th>
-              <img src={trophy} alt="trofeu" /> Total de vitorias
+              <div>
+                <img src={trophy} alt="trofeu" /> Total de vitorias
+              </div>
             </th>
             <th>
-              <img src={ak47} alt="mira" /> Matou
+              <div>
+                <img src={ak47} alt="mira" /> Matou
+              </div>
             </th>
             <th>
-              <img src={skull} alt="caveira" /> Morreu
+              <div>
+                <img src={skull} alt="caveira" /> Morreu
+              </div>
             </th>
             <th>
-              <img src={crosshair} alt="assistencia" /> Assistencias
+              <div>
+                <img src={crosshair} alt="assistencia" /> Assistencias
+              </div>
             </th>
             <th>
-              <img src={flash} alt="assistencia" /> Assistencias com flashbang
+              <div>
+                <img src={flash} alt="assistencia" /> Assistencias com flashbang
+              </div>
             </th>
           </tr>
         </thead>
@@ -136,22 +144,23 @@ export const Table = () => {
                 key={data.user}
                 onClick={(e) => {
                   const td = Array.from(e.currentTarget.querySelectorAll("td"));
-                  const Arraytd = td.map((item) => item.innerHTML);
-
-                  SetModalProp({
-                    img: Arraytd[0]
-                      .replace('<img src="', "")
-                      .replace('" alt="img">', ""),
-                    name: Arraytd[1],
-                    victories: Arraytd[2],
-                    kill: Arraytd[3],
-                    death: Arraytd[4],
-                    assists: Arraytd[5],
-                    assistsflash: Arraytd[6],
-                    total_rounds_played: Arraytd[7],
-                    rating: Arraytd[8],
-                  });
-                  setOpen(!open);
+                  const Arraytd = td.map((item) => item);
+                  if (e.target === Arraytd[1]) {
+                    SetModalProp({
+                      img: Arraytd[0].innerHTML
+                        .replace('<img src="', "")
+                        .replace('" alt="img">', ""),
+                      name: Arraytd[1].innerHTML,
+                      victories: Arraytd[2].innerHTML,
+                      kill: Arraytd[3].innerHTML,
+                      death: Arraytd[4].innerHTML,
+                      assists: Arraytd[5].innerHTML,
+                      assistsflash: Arraytd[6].innerHTML,
+                      total_rounds_played: Arraytd[7].innerHTML,
+                      rating: Arraytd[8].innerHTML,
+                    });
+                    setOpen(!open);
+                  }
                 }}
               >
                 <TrStyled index={index}>
@@ -191,44 +200,90 @@ export const Table = () => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <img
-              src={modalProp?.img}
+            <div
               style={{
-                width: "250px",
-                objectFit: "contain",
-                border: "solid 2px #07032a",
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+                background: "#161415",
+                textAlign: "center",
+                color: "#c1c0c0",
               }}
-              alt="img"
-            />
+            >
+              <img
+                style={{ width: "50px", objectFit: "contain" }}
+                src={fraterb}
+                alt=""
+              />{" "}
+              <h1>👑 {modalProp?.name}</h1>
+              <img
+                style={{
+                  width: "50px",
+                  objectFit: "contain",
+                }}
+                src={fraterb}
+                alt=""
+              />
+            </div>
             <DivModal>
-              <h1>Jogador: {modalProp?.name}</h1>
+              <section>
+                <img src={modalProp?.img} />
+              </section>
               <div>
+                {" "}
                 <p>
-                  <img src={trophy} /> Total de vitorias: {modalProp?.victories}
+                  <img src={trophy} alt="" /> Total de vitorias:{" "}
+                  <span> {modalProp?.victories}</span>
                 </p>
                 <p>
-                  <img src={ak47} /> Matou: {modalProp?.kill}
+                  <img src={ak47} alt="" /> Matou:{" "}
+                  <span> {modalProp?.kill}</span>
                 </p>
                 <p>
-                  <img src={skull} /> Morreu: {modalProp?.death}
+                  <img src={skull} alt="" /> Morreu:{" "}
+                  <span> {modalProp?.death}</span>
                 </p>
                 <p>
-                  <img src={crosshair} /> Assistencias: {modalProp?.assists}
+                  <img src={target} alt="" /> Assistencias:{" "}
+                  <span> {modalProp?.assists}</span>
                 </p>
                 <p>
-                  <img src={flash} /> Assistencia com flashbang:{" "}
-                  {modalProp?.assistsflash}
-                </p>
-                <p>
-                  🚀 Total de rounds Jogados: {modalProp?.total_rounds_played}
+                  <img src={flash} alt="" /> Assistencias com flashbang:{" "}
+                  <span> {modalProp?.assistsflash}</span>
                 </p>
               </div>
+              <DivModalRating>
+                Rating
+                <h1>{modalProp?.rating}</h1>
+              </DivModalRating>
             </DivModal>
-            <DivModalRating>
-              <img src={fraterb} alt="fraterb" />
-              <h1>Rating</h1>
-              <p>{modalProp?.rating}</p>
-            </DivModalRating>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+                background: "#161415",
+                textAlign: "center",
+                color: "#c1c0c0",
+              }}
+            >
+              <img
+                style={{ width: "50px", objectFit: "contain" }}
+                src={fraterb}
+                alt=""
+              />
+              <h1>
+                🚀 Total de rounds jogados:{" "}
+                <span style={{ fontWeight: "400" }}>
+                  {modalProp?.total_rounds_played}
+                </span>
+              </h1>
+              <img
+                style={{ width: "50px", objectFit: "contain" }}
+                src={fraterb}
+                alt=""
+              />
+            </div>
           </Box>
         </Modal>
       </TableStyled>

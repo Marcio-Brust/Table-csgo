@@ -7,9 +7,8 @@ interface TableProps {
 export const TableStyled = styled.table`
   padding: 30px;
   border-collapse: collapse;
-  font-family: "Kanit", sans-serif;
   letter-spacing: 0.07rem;
-  color: #f1f1f1;
+  color: #c1c0c0;
 
   img {
     width: 20px;
@@ -24,6 +23,12 @@ export const TableStyled = styled.table`
       padding: 10px;
       font-size: 1rem;
       font-weight: 400;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
     }
   }
   tbody {
@@ -35,36 +40,46 @@ export const TableStyled = styled.table`
 `;
 
 export const TrStyled = styled.tr<TableProps>`
-  background: ${({ index }) =>
-    index % 2 === 0
-      ? "linear-gradient(120deg, #00adee, #000 )"
-      : "linear-gradient(120deg, #000, #00adee 10%)"};
+  background: ${({ index }) => (index % 2 === 0 ? "#161415" : "#0480bd")};
 
   &:hover {
-    background: #07032a;
+    background: #04aee1;
   }
 `;
 
 export const DivModal = styled.div`
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
-  width: 300px;
+  width: 100%;
+  height: 300px;
   letter-spacing: 0.07rem;
-  color: #f1f1f1;
+  color: #c1c0c0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
 
   h1 {
     font-size: 2rem;
   }
   p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 800;
+  }
+  span {
+    font-weight: 200;
+  }
+  img {
+    width: 100px;
   }
 
   div {
-    display: grid;
-
     img {
       width: 20px;
+      height: 20px;
     }
   }
 `;
@@ -73,8 +88,15 @@ export const DivModalRating = styled.div`
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
   letter-spacing: 0.07rem;
-  color: #f1f1f1;
-  padding: 20px;
+  font-weight: 800;
+  width: 150px;
+  height: 150px;
+  border: solid 20px #c1c0c0;
+  border-left: solid 20px transparent;
+  border-right: solid 20px transparent;
+  border-radius: 100px;
+  color: #c1c0c0;
+  padding: 30px;
   text-align: center;
 
   img {
