@@ -53,7 +53,7 @@ export const Table = () => {
           value={search}
           onChange={(e) =>
             setSearch(
-              e.target.value.toUpperCase()
+              e.target.value.length <= 1 ? e.target.value.toUpperCase():e.target.value
             )
           }
         />
