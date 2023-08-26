@@ -53,9 +53,7 @@ export const Table = () => {
           value={search}
           onChange={(e) =>
             setSearch(
-              e.target.value.length <= 1
-                ? e.target.value.toLocaleUpperCase()
-                : e.target.value
+              e.target.value.toUpperCase()
             )
           }
         />
@@ -63,7 +61,9 @@ export const Table = () => {
       <TableStyled>
         <thead>
           <tr>
-            <th></th>
+            <th>
+              Ranking
+            </th>
             <th>
               <div>
                 <img src={target} alt="player" /> Jogador
@@ -136,7 +136,7 @@ export const Table = () => {
                       cursor: "pointer",
                     }}
                   >
-                    {data.user.toLocaleUpperCase()}
+                    {data.user.toUpperCase()}
                   </td>
                   <td>{data.total_wins}</td>
                   <td>{data.kills}</td>
@@ -189,7 +189,7 @@ export const Table = () => {
                       cursor: "pointer",
                     }}
                   >
-                    {data.user.toLocaleUpperCase()}
+                    {data.user.toUpperCase()}
                   </td>
                   <td>{data.total_wins}</td>
                   <td>{data.kills}</td>
