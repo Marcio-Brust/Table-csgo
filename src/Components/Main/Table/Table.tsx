@@ -10,6 +10,7 @@ import trophy from "../../../assets/image/trophy.png";
 import eu from "../../../assets/image/WhatsApp Image 2023-08-23 at 19.44.26.jpeg";
 /* import fraterb from "../../assets/image/8142c750135a0999440049cec115651d.png"; */
 import { Box, Modal } from "@mui/material";
+import useMedia from "../../../Ultils/Hooks/useMedia";
 
 const style = {
   position: "absolute" as const,
@@ -17,6 +18,18 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 800,
+  bgcolor: "background.paper",
+  boxShadow: 24,
+  p: 0,
+  background: "#0480bd",
+};
+
+const styleMobile = {
+  position: "absolute" as const,
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 360,
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 0,
@@ -40,6 +53,8 @@ export const Table = () => {
   const [modalProp, SetModalProp] = useState<ModalProps>();
   const [search, setSearch] = useState("");
 
+  const mobile = useMedia("(max-width: 55rem)");
+  console.log(mobile);
   const filteredRepos =
     search.length > 0 ? Data.filter((data) => data.user.includes(search)) : [];
 
@@ -64,7 +79,7 @@ export const Table = () => {
         <thead>
           <tr>
             <th style={{ padding: "0px" }}></th>
-            <th style={{ padding: "0px" }}>Ranking</th>
+            <th style={{ padding: "0px" }}></th>
             <th>
               <div>
                 <img src={target} alt="player" /> Jogador
@@ -72,7 +87,7 @@ export const Table = () => {
             </th>
             <th>
               <div>
-                <img src={trophy} alt="trofeu" /> Total de vitorias
+                <img src={trophy} alt="trofeu" /> Vitorias
               </div>
             </th>
             <th>
@@ -80,17 +95,17 @@ export const Table = () => {
                 <img src={ak47} alt="mira" /> Matou
               </div>
             </th>
-            <th>
+            <th style={{ display: mobile ? "none" : "" }}>
               <div>
                 <img src={skull} alt="caveira" /> Morreu
               </div>
             </th>
-            <th>
+            <th style={{ display: mobile ? "none" : "" }}>
               <div>
                 <img src={crosshair} alt="assistencia" /> Assistencias
               </div>
             </th>
-            <th>
+            <th style={{ display: mobile ? "none" : "" }}>
               <div>
                 <img src={flash} alt="assistencia" /> Assistencias com flashbang
               </div>
@@ -106,7 +121,7 @@ export const Table = () => {
                   const Arraytd = td.map((item) => item);
                   if (e.target === Arraytd[2]) {
                     SetModalProp({
-                      img: Arraytd[0].innerHTML
+                      img: Arraytd[1].innerHTML
                         .replace('<img src="', "")
                         .replace('" alt="img">', ""),
                       name: Arraytd[2].innerHTML,
@@ -123,6 +138,7 @@ export const Table = () => {
                 }}
               >
                 <TrStyled index={index}>
+                  <td style={{ textAlign: "left" }}>{`${index + 1}ª`}</td>
                   <td
                     style={{
                       textAlign: "left",
@@ -130,7 +146,6 @@ export const Table = () => {
                   >
                     <img src={eu} alt="img" />
                   </td>
-                  <td style={{ textAlign: "left" }}>{`${index + 1}ª`}</td>
 
                   <td
                     style={{
@@ -160,7 +175,7 @@ export const Table = () => {
                   const Arraytd = td.map((item) => item);
                   if (e.target === Arraytd[2]) {
                     SetModalProp({
-                      img: Arraytd[0].innerHTML
+                      img: Arraytd[1].innerHTML
                         .replace('<img src="', "")
                         .replace('" alt="img">', ""),
                       name: Arraytd[2].innerHTML,
@@ -177,6 +192,7 @@ export const Table = () => {
                 }}
               >
                 <TrStyled index={index}>
+                  <td style={{ textAlign: "left" }}>{`${index + 1}ª`}</td>
                   <td
                     style={{
                       textAlign: "left",
@@ -184,7 +200,6 @@ export const Table = () => {
                   >
                     <img src={eu} alt="img" />
                   </td>
-                  <td style={{ textAlign: "left" }}>{`${index + 1}ª`}</td>
                   <td
                     style={{
                       textAlign: "left",
@@ -195,9 +210,16 @@ export const Table = () => {
                   </td>
                   <td>{data.total_wins}</td>
                   <td>{data.kills}</td>
-                  <td>{data.deaths}</td>
-                  <td>{data.assists}</td>
-                  <td>{data.flashbang_assists}</td>
+
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.deaths}
+                  </td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.assists}
+                  </td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.flashbang_assists}
+                  </td>
 
                   <td style={{ display: "none" }}>
                     {data.total_rounds_played}
@@ -212,7 +234,7 @@ export const Table = () => {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
+          <Box sx={mobile ? styleMobile : style}>
             <div
               style={{
                 display: "flex",
@@ -225,7 +247,7 @@ export const Table = () => {
             >
               <h1>👑 {modalProp?.name}</h1>
             </div>
-            <DivModal>
+            <DivModal mobile={mobile}>
               <section>
                 <img src={modalProp?.img} />
               </section>
@@ -251,8 +273,14 @@ export const Table = () => {
                   <img src={flash} alt="" /> Assistencias com flashbang:{" "}
                   <span> {modalProp?.assistsflash}</span>
                 </p>
+                {mobile && (
+                  <p>
+                    <img alt="" /> Rating:
+                    <span> {modalProp?.rating}</span>
+                  </p>
+                )}
               </div>
-              <DivModalRating>
+              <DivModalRating mobile={mobile}>
                 Rating
                 <h1>{modalProp?.rating}</h1>
               </DivModalRating>

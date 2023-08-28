@@ -48,14 +48,18 @@ export const TrStyled = styled.tr<TableProps>`
   }
 `;
 
-export const DivModal = styled.div`
+interface PropModal {
+  mobile: boolean;
+}
+
+export const DivModal = styled.div<PropModal>`
   width: 100%;
   height: 300px;
   letter-spacing: 0.07rem;
   color: #c1c0c0;
   display: flex;
-
-  justify-content: space-around;
+  justify-content: ${({ mobile }) =>
+    mobile ? "space-between" : "space-around"};
   align-items: center;
   padding: 20px;
 
@@ -66,7 +70,7 @@ export const DivModal = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 0.95rem;
+    font-size: ${({ mobile }) => (mobile ? "0.5rem" : " 0.95rem")};
     font-weight: 800;
     padding: 5px;
   }
@@ -74,7 +78,7 @@ export const DivModal = styled.div`
     font-weight: 200;
   }
   img {
-    width: 100px;
+    width: ${({ mobile }) => (mobile ? "75px" : "100px")};
   }
 
   div {
@@ -85,7 +89,8 @@ export const DivModal = styled.div`
   }
 `;
 
-export const DivModalRating = styled.div`
+export const DivModalRating = styled.div<PropModal>`
+  display: ${({ mobile }) => (mobile ? "none" : "")};
   letter-spacing: 0.07rem;
   font-weight: 800;
   width: 150px;
