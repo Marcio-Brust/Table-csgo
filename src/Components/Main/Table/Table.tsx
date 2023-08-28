@@ -54,7 +54,7 @@ export const Table = () => {
   const [search, setSearch] = useState("");
 
   const mobile = useMedia("(max-width: 55rem)");
-  console.log(mobile);
+
   const filteredRepos =
     search.length > 0 ? Data.filter((data) => data.user.includes(search)) : [];
 
@@ -90,7 +90,7 @@ export const Table = () => {
                 <img src={trophy} alt="trofeu" /> Vitorias
               </div>
             </th>
-            <th>
+            <th style={{ display: mobile ? "none" : "" }}>
               <div>
                 <img src={ak47} alt="mira" /> Matou
               </div>
@@ -149,17 +149,25 @@ export const Table = () => {
 
                   <td
                     style={{
-                      textAlign: "left",
+                      textAlign: "center",
                       cursor: "pointer",
                     }}
                   >
                     {data.user.toUpperCase()}
                   </td>
                   <td>{data.total_wins}</td>
-                  <td>{data.kills}</td>
-                  <td>{data.deaths}</td>
-                  <td>{data.assists}</td>
-                  <td>{data.flashbang_assists}</td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.kills}
+                  </td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.deaths}
+                  </td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.assists}
+                  </td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.flashbang_assists}
+                  </td>
                   <td style={{ display: "none" }}>
                     {data.total_rounds_played}
                   </td>
@@ -202,14 +210,16 @@ export const Table = () => {
                   </td>
                   <td
                     style={{
-                      textAlign: "left",
+                      textAlign: "center",
                       cursor: "pointer",
                     }}
                   >
                     {data.user.toUpperCase()}
                   </td>
                   <td>{data.total_wins}</td>
-                  <td>{data.kills}</td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.kills}
+                  </td>
 
                   <td style={{ display: mobile ? "none" : "" }}>
                     {data.deaths}
@@ -295,7 +305,7 @@ export const Table = () => {
                 color: "#c1c0c0",
               }}
             >
-              <h1>
+              <h1 style={{ fontSize: mobile ? "1.4rem" : "" }}>
                 🚀 Total de rounds jogados:{" "}
                 <span style={{ fontWeight: "400" }}>
                   {modalProp?.total_rounds_played}

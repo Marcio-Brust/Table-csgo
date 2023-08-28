@@ -30,8 +30,8 @@ export const Mainstyled = styled.main`
       border: solid 2px #0480bd;
     }
 
-    &:hover {
+    /*     &:hover {
       border: solid 2px #0480bd;
-    }
+    } */
   }
 `;

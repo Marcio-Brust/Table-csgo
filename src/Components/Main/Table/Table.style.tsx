@@ -70,7 +70,7 @@ export const DivModal = styled.div<PropModal>`
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: ${({ mobile }) => (mobile ? "0.5rem" : " 0.95rem")};
+    font-size: ${({ mobile }) => (mobile ? "0.7rem" : " 0.95rem")};
     font-weight: 800;
     padding: 5px;
   }

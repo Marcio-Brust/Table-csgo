@@ -7,7 +7,7 @@ export const GlobalStyled = createGlobalStyle`
     padding:0px;
     box-sizing:border-box;
     font-family: 'Anek Malayalam', sans-serif;
-    letter-spacing:1.3px;
+    letter-spacing:2.5px;
 }
  body{
   background: #f1f1f1;
