@@ -6,6 +6,9 @@ export const Header = () => {
     <HeaderStyled>
       <nav>
         <button>menu</button>
+        <div>
+          <img src={fraterb} />
+        </div>
         <ul>
           <li>
             <a href="">Partidas</a>
@@ -13,13 +16,7 @@ export const Header = () => {
           <li>
             <a href="">Ranking</a>
           </li>
-          <li>
-            <a href="">Login</a>
-          </li>
         </ul>
-        <div>
-          <img src={fraterb} />
-        </div>
       </nav>
     </HeaderStyled>
   );

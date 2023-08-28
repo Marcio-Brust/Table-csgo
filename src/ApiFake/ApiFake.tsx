@@ -10,7 +10,7 @@ export const Data = [
     rating: 0.4,
   },
   {
-    user: "Jamal em outra semana",
+    user: "JamalGod",
     total_wins: 7,
     kills: 20,
     deaths: 15,
@@ -81,6 +81,16 @@ export const Data = [
   },
   {
     user: "Jota",
+    total_wins: 5,
+    kills: 20,
+    deaths: 18,
+    assists: 5,
+    flashbang_assists: 5,
+    total_rounds_played: 32,
+    rating: 1.2,
+  },
+  {
+    user: "JA1",
     total_wins: 5,
     kills: 20,
     deaths: 18,

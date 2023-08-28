@@ -5,11 +5,9 @@ interface TableProps {
 }
 
 export const TableStyled = styled.table`
-  padding: 30px;
   border-collapse: collapse;
   letter-spacing: 0.07rem;
   color: #c1c0c0;
-  margin-top: 30px;
   width: 100%;
 
   img {

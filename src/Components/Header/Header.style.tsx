@@ -14,9 +14,9 @@ export const HeaderStyled = styled.header`
   nav {
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: 1000px;
-    justify-content: space-between;
     transition: 0.5s;
 
     ul {

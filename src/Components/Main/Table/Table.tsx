@@ -53,7 +53,9 @@ export const Table = () => {
           value={search}
           onChange={(e) =>
             setSearch(
-              e.target.value.length <= 1 ? e.target.value.toUpperCase():e.target.value
+              e.target.value.length <= 1
+                ? e.target.value.toUpperCase()
+                : e.target.value
             )
           }
         />
@@ -61,9 +63,8 @@ export const Table = () => {
       <TableStyled>
         <thead>
           <tr>
-            <th>
-              Ranking
-            </th>
+            <th style={{ padding: "0px" }}></th>
+            <th style={{ padding: "0px" }}>Ranking</th>
             <th>
               <div>
                 <img src={target} alt="player" /> Jogador
@@ -103,19 +104,19 @@ export const Table = () => {
                 onClick={(e) => {
                   const td = Array.from(e.currentTarget.querySelectorAll("td"));
                   const Arraytd = td.map((item) => item);
-                  if (e.target === Arraytd[1]) {
+                  if (e.target === Arraytd[2]) {
                     SetModalProp({
                       img: Arraytd[0].innerHTML
                         .replace('<img src="', "")
                         .replace('" alt="img">', ""),
-                      name: Arraytd[1].innerHTML,
-                      victories: Arraytd[2].innerHTML,
-                      kill: Arraytd[3].innerHTML,
-                      death: Arraytd[4].innerHTML,
-                      assists: Arraytd[5].innerHTML,
-                      assistsflash: Arraytd[6].innerHTML,
-                      total_rounds_played: Arraytd[7].innerHTML,
-                      rating: Arraytd[8].innerHTML,
+                      name: Arraytd[2].innerHTML,
+                      victories: Arraytd[3].innerHTML,
+                      kill: Arraytd[4].innerHTML,
+                      death: Arraytd[5].innerHTML,
+                      assists: Arraytd[6].innerHTML,
+                      assistsflash: Arraytd[7].innerHTML,
+                      total_rounds_played: Arraytd[8].innerHTML,
+                      rating: Arraytd[9].innerHTML,
                     });
                     setOpen(!open);
                   }
@@ -125,11 +126,12 @@ export const Table = () => {
                   <td
                     style={{
                       textAlign: "left",
-                      cursor: "pointer",
                     }}
                   >
                     <img src={eu} alt="img" />
                   </td>
+                  <td style={{ textAlign: "left" }}>{`${index + 1}ª`}</td>
+
                   <td
                     style={{
                       textAlign: "left",
@@ -156,19 +158,19 @@ export const Table = () => {
                 onClick={(e) => {
                   const td = Array.from(e.currentTarget.querySelectorAll("td"));
                   const Arraytd = td.map((item) => item);
-                  if (e.target === Arraytd[1]) {
+                  if (e.target === Arraytd[2]) {
                     SetModalProp({
                       img: Arraytd[0].innerHTML
                         .replace('<img src="', "")
                         .replace('" alt="img">', ""),
-                      name: Arraytd[1].innerHTML,
-                      victories: Arraytd[2].innerHTML,
-                      kill: Arraytd[3].innerHTML,
-                      death: Arraytd[4].innerHTML,
-                      assists: Arraytd[5].innerHTML,
-                      assistsflash: Arraytd[6].innerHTML,
-                      total_rounds_played: Arraytd[7].innerHTML,
-                      rating: Arraytd[8].innerHTML,
+                      name: Arraytd[2].innerHTML,
+                      victories: Arraytd[3].innerHTML,
+                      kill: Arraytd[4].innerHTML,
+                      death: Arraytd[5].innerHTML,
+                      assists: Arraytd[6].innerHTML,
+                      assistsflash: Arraytd[7].innerHTML,
+                      total_rounds_played: Arraytd[8].innerHTML,
+                      rating: Arraytd[9].innerHTML,
                     });
                     setOpen(!open);
                   }
@@ -178,11 +180,11 @@ export const Table = () => {
                   <td
                     style={{
                       textAlign: "left",
-                      cursor: "pointer",
                     }}
                   >
                     <img src={eu} alt="img" />
                   </td>
+                  <td style={{ textAlign: "left" }}>{`${index + 1}ª`}</td>
                   <td
                     style={{
                       textAlign: "left",

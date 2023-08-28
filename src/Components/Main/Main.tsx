@@ -8,6 +8,7 @@ const Main = () => {
       style={{
         backgroundImage: `url(${background})`,
         backgroundRepeat: "no-repeat",
+        backgroundSize: "auto",
       }}
     >
       <Table />
