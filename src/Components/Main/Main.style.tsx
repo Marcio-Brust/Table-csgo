@@ -15,7 +15,7 @@ export const Mainstyled = styled.main<PropMain>`
   font-family: "Anek Malayalam", sans-serif;
 
   input::placeholder {
-    color: #222;
+    color: #c1c0c0;
   }
 
   input {
