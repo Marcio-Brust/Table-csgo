@@ -16,7 +16,7 @@ const Main = () => {
       }}
     >
       <Table />
-      <DivRowPageStyled mobile={mobile ? mobile.toString():null}>
+      <DivRowPageStyled mobile={mobile ? mobile.toString() : null}>
         <nav>
           <div>
             <span>10</span>
@@ -24,8 +24,8 @@ const Main = () => {
           </div>
           -
           <div>
-            <span>⮜</span>
-            <span>⮞</span>
+            <span>❮</span>
+            <span>❯</span>
           </div>
         </nav>
       </DivRowPageStyled>
