@@ -12,6 +12,8 @@ export const Mainstyled = styled.main<PropMain>`
   width: 100%;
   padding: 30px;
   min-height: 650px;
+  height: 100%;
+
   font-family: "Anek Malayalam", sans-serif;
 
   input::placeholder {
