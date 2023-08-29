@@ -10,6 +10,7 @@ import assist from "../../../assets/image/icons8-helping-hand-48.png";
 /* import target from "../../../assets/image/target.png"; */
 import player from "../../../assets/image/icons8-player-32.png";
 import trophy from "../../../assets/image/trophy.png";
+import rating from "../../../assets/image/icons8-rating-30.png";
 import eu from "../../../assets/image/WhatsApp Image 2023-08-23 at 19.44.26.jpeg";
 /* import fraterb from "../../assets/image/8142c750135a0999440049cec115651d.png"; */
 import { Box, Modal } from "@mui/material";
@@ -289,7 +290,7 @@ export const Table = () => {
                 </p>
                 {mobile && (
                   <p>
-                    <img alt="" /> Rating:
+                    <img src={rating} /> Rating:
                     <span> {modalProp?.rating}</span>
                   </p>
                 )}
