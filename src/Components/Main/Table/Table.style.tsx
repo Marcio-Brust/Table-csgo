@@ -49,7 +49,7 @@ export const TrStyled = styled.tr<TableProps>`
 `;
 
 interface PropModal {
-  mobile: boolean;
+  mobile: boolean | string | null;
 }
 
 export const DivModal = styled.div<PropModal>`
@@ -57,11 +57,16 @@ export const DivModal = styled.div<PropModal>`
   height: 300px;
   letter-spacing: 0.07rem;
   color: #c1c0c0;
-  display: flex;
+  display: ${({ mobile }) => (mobile ? "grid" : "flex")};
   justify-content: ${({ mobile }) =>
     mobile ? "space-between" : "space-around"};
   align-items: center;
   padding: 20px;
+
+  section {
+    display: flex;
+    justify-content: center;
+  }
 
   h1 {
     font-size: 2rem;
@@ -82,6 +87,8 @@ export const DivModal = styled.div<PropModal>`
   }
 
   div {
+    display: grid;
+    grid-template-columns: ${({ mobile }) => (mobile ? "1fr 1fr" : "1fr")};
     img {
       width: 20px;
       height: 20px;
@@ -90,7 +97,7 @@ export const DivModal = styled.div<PropModal>`
 `;
 
 export const DivModalRating = styled.div<PropModal>`
-  display: ${({ mobile }) => (mobile ? "none" : "")};
+  display: ${({ mobile }) => (mobile ? "none" : "")} !important;
   letter-spacing: 0.07rem;
   font-weight: 800;
   width: 150px;

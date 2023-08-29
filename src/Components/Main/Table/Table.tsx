@@ -107,7 +107,7 @@ export const Table = () => {
             </th>
             <th style={{ display: mobile ? "none" : "" }}>
               <div>
-                <img src={flash} alt="assistencia" /> Assistencias com flashbang
+                <img src={flash} alt="assistencia" /> Flashbang
               </div>
             </th>
           </tr>
@@ -257,15 +257,15 @@ export const Table = () => {
             >
               <h1>👑 {modalProp?.name}</h1>
             </div>
-            <DivModal mobile={mobile}>
+            <DivModal mobile={mobile ? mobile.toString() : null}>
               <section>
                 <img src={modalProp?.img} />
               </section>
               <div>
                 {" "}
                 <p>
-                  <img src={trophy} alt="" /> Total de vitorias:{" "}
-                  <span> {modalProp?.victories}</span>
+                  <img src={trophy} alt="" />
+                  Vitorias: <span> {modalProp?.victories}</span>
                 </p>
                 <p>
                   <img src={ak47} alt="" /> Matou:{" "}
@@ -280,7 +280,7 @@ export const Table = () => {
                   <span> {modalProp?.assists}</span>
                 </p>
                 <p>
-                  <img src={flash} alt="" /> Assistencias com flashbang:{" "}
+                  <img src={flash} alt="" /> flashbang:{" "}
                   <span> {modalProp?.assistsflash}</span>
                 </p>
                 {mobile && (
@@ -290,7 +290,7 @@ export const Table = () => {
                   </p>
                 )}
               </div>
-              <DivModalRating mobile={mobile}>
+              <DivModalRating mobile={mobile ? mobile.toString() : null}>
                 Rating
                 <h1>{modalProp?.rating}</h1>
               </DivModalRating>
@@ -305,7 +305,7 @@ export const Table = () => {
                 color: "#c1c0c0",
               }}
             >
-              <h1 style={{ fontSize: mobile ? "1.4rem" : "" }}>
+              <h1 style={{ fontSize: mobile ? "1rem" : "" }}>
                 🚀 Total de rounds jogados:{" "}
                 <span style={{ fontWeight: "400" }}>
                   {modalProp?.total_rounds_played}

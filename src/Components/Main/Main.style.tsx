@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Mainstyled = styled.main`
+interface PropMain {
+  mobile: boolean | string | null;
+}
+
+export const Mainstyled = styled.main<PropMain>`
   display: grid;
   justify-content: center;
   grid-template-rows: 50px 1fr;
@@ -18,7 +22,7 @@ export const Mainstyled = styled.main`
     border: none;
     padding: 10px;
     cursor: pointer;
-    width: 300px;
+    width: ${({ mobile }) => (mobile ? "100%" : "300px")};
     border: solid 2px transparent;
     border-radius: 5px;
     font-size: 1rem;
