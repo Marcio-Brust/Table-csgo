@@ -23,6 +23,11 @@ export const HeaderStyled = styled.header`
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      img {
+        width: 24px;
+        margin-right: 5px;
+      }
     }
     a {
       display: flex;
