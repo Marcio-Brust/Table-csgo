@@ -1,5 +1,5 @@
 import { Table } from "./Table/Table";
-import { Mainstyled } from "./Main.style";
+import { DivRowPageStyled, Mainstyled } from "./Main.style";
 import background from "../../assets/image/665419.png";
 import useMedia from "../../Ultils/Hooks/useMedia";
 
@@ -16,6 +16,19 @@ const Main = () => {
       }}
     >
       <Table />
+      <DivRowPageStyled mobile={mobile ? mobile.toString():null}>
+        <nav>
+          <div>
+            <span>10</span>
+            <span>▼</span>
+          </div>
+          -
+          <div>
+            <span>⮜</span>
+            <span>⮞</span>
+          </div>
+        </nav>
+      </DivRowPageStyled>
     </Mainstyled>
   );
 };

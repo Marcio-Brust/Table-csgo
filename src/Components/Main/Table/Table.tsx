@@ -238,6 +238,7 @@ export const Table = () => {
                 </TrStyled>
               </tbody>
             ))}
+
         <Modal
           open={open}
           onClose={() => setOpen(!open)}

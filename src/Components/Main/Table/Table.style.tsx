@@ -9,6 +9,8 @@ export const TableStyled = styled.table`
   letter-spacing: 0.07rem;
   color: #c1c0c0;
   width: 100%;
+  opacity: 0.9;
+  margin-top: 25px;
 
   img {
     width: 20px;
@@ -17,10 +19,11 @@ export const TableStyled = styled.table`
 
   thead {
     vertical-align: middle;
+    background: #0480bd;
 
     th {
       text-align: left;
-      padding: 10px;
+      padding: 20px;
       font-size: 1rem;
       font-weight: 800;
       color: #161415;
@@ -41,7 +44,7 @@ export const TableStyled = styled.table`
 `;
 
 export const TrStyled = styled.tr<TableProps>`
-  background: ${({ index }) => (index % 2 === 0 ? "#161415" : "#0480bd")};
+  background: ${({ index }) => (index % 2 === 0 ? "#161415" : "#555")};
   opacity: 0.9;
   &:hover {
     background: #3f626d;
