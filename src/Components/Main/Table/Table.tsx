@@ -142,7 +142,7 @@ export const Table = () => {
                 }}
               >
                 <TrStyled index={index}>
-                  <td style={{ textAlign: "left" }}>{`${index + 1}ª`}</td>
+                  <td style={{ textAlign: "left" }}>{`${index + 1}º`}</td>
                   <td
                     style={{
                       textAlign: "left",
@@ -204,7 +204,7 @@ export const Table = () => {
                 }}
               >
                 <TrStyled index={index}>
-                  <td style={{ textAlign: "left" }}>{`${index + 1}ª`}</td>
+                  <td style={{ textAlign: "left" }}>{`${index + 1}º`}</td>
                   <td
                     style={{
                       textAlign: "left",
