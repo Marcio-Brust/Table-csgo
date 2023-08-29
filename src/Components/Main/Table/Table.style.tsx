@@ -9,7 +9,7 @@ export const TableStyled = styled.table`
   letter-spacing: 0.07rem;
   color: #c1c0c0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.99;
   margin-top: 25px;
 
   img {
@@ -20,6 +20,7 @@ export const TableStyled = styled.table`
   thead {
     vertical-align: middle;
     background: #0480bd;
+    opacity: 0.99;
 
     th {
       text-align: left;

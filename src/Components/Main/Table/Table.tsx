@@ -21,7 +21,7 @@ const style = {
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 0,
-  background: "#0480bd",
+  background: "#161415",
 };
 
 const styleMobile = {
@@ -33,7 +33,7 @@ const styleMobile = {
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 0,
-  background: "#0480bd",
+  background: "#161415",
 };
 
 interface ModalProps {
@@ -251,7 +251,7 @@ export const Table = () => {
                 display: "flex",
                 justifyContent: "center",
                 width: "100%",
-                background: "#161415",
+                background: "#0480bd",
                 textAlign: "center",
                 color: "#c1c0c0",
               }}

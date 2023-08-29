@@ -28,7 +28,7 @@ export const Mainstyled = styled.main<PropMain>`
     outline: none;
     transition: 0.5s;
     background: #555;
-    opacity: 0.9;
+    opacity: 0.99;
 
     &:focus {
       border: solid 2px #0480bd;
@@ -49,7 +49,7 @@ export const DivRowPageStyled = styled.div<PropMain>`
   gap: 10px;
   background: #161415;
   color: #c1c0c0;
-  opacity: 0.9;
+  opacity: 0.99;
 
   nav {
     display: flex;
