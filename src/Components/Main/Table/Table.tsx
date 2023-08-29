@@ -2,10 +2,13 @@ import { useState } from "react";
 import { DivModal, DivModalRating, TableStyled, TrStyled } from "./Table.style";
 import { Data } from "../../../ApiFake/ApiFake";
 import ak47 from "../../../assets/image/ak-47.png";
-import crosshair from "../../../assets/image/crosshair.png";
+/* import crosshair from "../../../assets/image/crosshair.png"; */
 import flash from "../../../assets/image/flashbang.png";
-import skull from "../../../assets/image/skull.png";
-import target from "../../../assets/image/target.png";
+/* import skull from "../../../assets/image/skull.png"; */
+import skull2 from "../../../assets/image/icons8-skull-48.png";
+import assist from "../../../assets/image/icons8-helping-hand-48.png";
+/* import target from "../../../assets/image/target.png"; */
+import player from "../../../assets/image/icons8-player-32.png";
 import trophy from "../../../assets/image/trophy.png";
 import eu from "../../../assets/image/WhatsApp Image 2023-08-23 at 19.44.26.jpeg";
 /* import fraterb from "../../assets/image/8142c750135a0999440049cec115651d.png"; */
@@ -82,7 +85,7 @@ export const Table = () => {
             <th style={{ padding: "0px" }}></th>
             <th>
               <div>
-                <img src={target} alt="player" /> Jogador
+                <img src={player} alt="player" /> Jogador
               </div>
             </th>
             <th>
@@ -97,12 +100,12 @@ export const Table = () => {
             </th>
             <th style={{ display: mobile ? "none" : "" }}>
               <div>
-                <img src={skull} alt="caveira" /> Morreu
+                <img src={skull2} alt="caveira" /> Morreu
               </div>
             </th>
             <th style={{ display: mobile ? "none" : "" }}>
               <div>
-                <img src={crosshair} alt="assistencia" /> Assistencias
+                <img src={assist} alt="assistencia" /> Assistencias
               </div>
             </th>
             <th style={{ display: mobile ? "none" : "" }}>
@@ -273,11 +276,11 @@ export const Table = () => {
                   <span> {modalProp?.kill}</span>
                 </p>
                 <p>
-                  <img src={skull} alt="" /> Morreu:{" "}
+                  <img src={skull2} alt="" /> Morreu:{" "}
                   <span> {modalProp?.death}</span>
                 </p>
                 <p>
-                  <img src={target} alt="" /> Assistencias:{" "}
+                  <img src={assist} alt="" /> Assistencias:{" "}
                   <span> {modalProp?.assists}</span>
                 </p>
                 <p>
