@@ -34,7 +34,7 @@ export const Header = () => {
           <img src={fraterb} />
         </div>
         <button onClick={() => setIsVisible(!isVisible)}>
-          Menu <span></span>
+          <span></span>
         </button>
         <ul>
           <li>
