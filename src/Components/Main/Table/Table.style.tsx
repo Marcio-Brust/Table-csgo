@@ -8,8 +8,7 @@ export const TableStyled = styled.table`
   border-collapse: collapse;
   letter-spacing: 0.07rem;
   color: #c1c0c0;
-  width: 100%;
-  opacity: 0.99;
+  opacity: 0.97;
   margin-top: 25px;
 
   img {
@@ -20,11 +19,11 @@ export const TableStyled = styled.table`
   thead {
     vertical-align: middle;
     background: #0480bd;
-    opacity: 0.99;
+    opacity: 0.97;
 
     th {
       text-align: left;
-      padding: 20px;
+      padding: 20px 10px;
       font-size: 1rem;
       font-weight: 800;
       color: #161415;
@@ -46,7 +45,7 @@ export const TableStyled = styled.table`
 
 export const TrStyled = styled.tr<TableProps>`
   background: ${({ index }) => (index % 2 === 0 ? "#161415" : "#555")};
-  opacity: 0.9;
+
   &:hover {
     background: #3f626d;
   }
@@ -113,6 +112,7 @@ export const DivModalRating = styled.div<PropModal>`
   color: #c1c0c0;
   padding: 30px;
   text-align: center;
+  opacity: 0.97;
 
   img {
     width: 200px;

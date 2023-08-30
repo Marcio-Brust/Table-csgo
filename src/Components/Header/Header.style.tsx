@@ -31,10 +31,11 @@ export const HeaderStyled = styled.header`
     }
     a {
       display: flex;
-      padding: 20px 30px;
+      padding: 20px 5px;
       color: #c1c0c0;
       font-weight: 700;
       transition: 0.5s;
+      font-size: 1rem;
 
       &:hover::after {
         content: "";

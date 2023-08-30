@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DivModal, DivModalRating, TableStyled, TrStyled } from "./Table.style";
 import { Data } from "../../../ApiFake/ApiFake";
+import { Seasons } from "../../../ApiFake/ApiFake";
 import ak47 from "../../../assets/image/ak-47.png";
 /* import crosshair from "../../../assets/image/crosshair.png"; */
 import flash from "../../../assets/image/flashbang.png";
@@ -64,7 +65,14 @@ export const Table = () => {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <div style={{ display:  "flex", justifyContent: "space-between" }}>
+        <select>
+          {Seasons.map((item, index) => (
+            <option key={index} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
         <input
           type="text"
           name="seatch"

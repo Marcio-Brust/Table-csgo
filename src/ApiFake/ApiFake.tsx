@@ -100,3 +100,11 @@ export const Data = [
     rating: 1.2,
   },
 ];
+
+export const Seasons = [
+  "Seasons 1",
+  "Seasons 2",
+  "Seasons 3",
+  "Seasons 4",
+  "Seasons 5",
+];

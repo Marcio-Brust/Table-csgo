@@ -20,10 +20,11 @@ export const Mainstyled = styled.main<PropMain>`
     color: #c1c0c0;
   }
 
-  input {
+  select {
+    display: flex;
     border: none;
     padding: 10px;
-    width: ${({ mobile }) => (mobile ? "100%" : "300px")};
+    width: ${({ mobile }) => (mobile ? "150px" : "300px")};
     border: solid 2px transparent;
     border-radius: 5px;
     font-size: 1rem;
@@ -31,11 +32,28 @@ export const Mainstyled = styled.main<PropMain>`
     transition: 0.5s;
     background: #555;
     opacity: 0.99;
+    color: #c1c0c0;
 
-    &:focus {
+    option {
+      padding: 10px;
+    }
+  }
+
+  input {
+    border: none;
+    padding: 10px;
+    width: ${({ mobile }) => (mobile ? "150px" : "300px")};
+    border: solid 2px transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.5s;
+    background: #555;
+    opacity: 0.99;
+    font &:focus {
       border: solid 2px #0480bd;
     }
-}
+  }
 `;
 
 export const DivRowPageStyled = styled.div<PropMain>`
@@ -47,7 +65,6 @@ export const DivRowPageStyled = styled.div<PropMain>`
   gap: 10px;
   background: #161415;
   color: #c1c0c0;
-  opacity: 0.99;
 
   nav {
     display: flex;
