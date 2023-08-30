@@ -22,7 +22,7 @@ export const Header = () => {
               target="_blank"
               rel="discord"
             >
-              <img alt="discord" /> Discord
+              Discord
             </a>
           </li>
         </ul>
