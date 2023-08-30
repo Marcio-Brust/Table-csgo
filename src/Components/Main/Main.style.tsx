@@ -35,11 +35,7 @@ export const Mainstyled = styled.main<PropMain>`
     &:focus {
       border: solid 2px #0480bd;
     }
-
-    /*     &:hover {
-      border: solid 2px #0480bd;
-    } */
-  }
+}
 `;
 
 export const DivRowPageStyled = styled.div<PropMain>`
