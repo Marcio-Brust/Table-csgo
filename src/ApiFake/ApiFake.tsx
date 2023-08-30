@@ -102,9 +102,9 @@ export const Data = [
 ];
 
 export const Seasons = [
-  "Seasons 1",
-  "Seasons 2",
-  "Seasons 3",
-  "Seasons 4",
-  "Seasons 5",
+  "Season 1",
+  "Season 2",
+  "Season 3",
+  "Season 4",
+  "Season 5",
 ];

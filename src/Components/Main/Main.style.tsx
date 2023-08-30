@@ -34,6 +34,10 @@ export const Mainstyled = styled.main<PropMain>`
     opacity: 0.99;
     color: #c1c0c0;
 
+    &:focus {
+      border: solid 2px #0480bd;
+    }
+
     option {
       padding: 10px;
     }
@@ -50,7 +54,8 @@ export const Mainstyled = styled.main<PropMain>`
     transition: 0.5s;
     background: #555;
     opacity: 0.99;
-    font &:focus {
+
+    &:focus {
       border: solid 2px #0480bd;
     }
   }
