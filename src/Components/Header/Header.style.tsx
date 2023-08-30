@@ -63,10 +63,10 @@ export const HeaderStyled = styled.header<HeaderProps>`
         css`
           display: block;
           position: absolute;
-          margin-top: 200px;
+          margin-top: 188px;
           right: 0;
           background: #161415;
-          padding-top: 100px;
+          padding-top: 98px;
           width: 150px;
           z-index: 9;
 
@@ -95,7 +95,7 @@ export const HeaderStyled = styled.header<HeaderProps>`
     }
     a {
       display: flex;
-      padding: 20px 10px;
+      padding: 20px 30px;
       color: #c1c0c0;
       font-weight: 700;
       transition: 0.5s;
