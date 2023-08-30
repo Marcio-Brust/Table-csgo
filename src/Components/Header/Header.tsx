@@ -1,6 +1,5 @@
 import { HeaderStyled } from "./Header.style";
 import fraterb from "../../assets/image/8142c750135a0999440049cec115651d.png";
-import discord from "../../assets/image/icons8-discord-24.png";
 
 export const Header = () => {
   return (
@@ -23,7 +22,7 @@ export const Header = () => {
               target="_blank"
               rel="discord"
             >
-              <img src={discord} alt="discord" /> Discord
+              <img alt="discord" /> Discord
             </a>
           </li>
         </ul>
