@@ -123,7 +123,7 @@ export const HeaderStyled = styled.header<HeaderProps>`
         content: "";
         position: absolute;
         display: block;
-        margin-left: -10px;
+        margin-left: -15px;
         margin-top: 7px;
         width: 8px;
         height: 8px;
