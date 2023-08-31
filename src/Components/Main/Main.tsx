@@ -4,7 +4,7 @@ import background from "../../assets/image/665419.png";
 import useMedia from "../../Ultils/Hooks/useMedia";
 
 const Main = () => {
-  const mobile = useMedia("(max-width: 55rem)");
+  const mobile = useMedia("(max-width:75rem)");
 
   return (
     <Mainstyled

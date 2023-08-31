@@ -4,7 +4,7 @@ import useMedia from "../../Ultils/Hooks/useMedia";
 import { useState } from "react";
 
 export const Header = () => {
-  const mobile = useMedia("(max-width: 55rem)");
+  const mobile = useMedia("(max-width:75rem)");
   const [isVisible, setIsVisible] = useState(false);
 
   if (mobile === false && isVisible) {

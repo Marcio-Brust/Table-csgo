@@ -40,6 +40,8 @@ export const Mainstyled = styled.main<PropMain>`
 
     option {
       padding: 10px;
+     
+      
     }
   }
 

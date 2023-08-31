@@ -58,14 +58,14 @@ export const Table = () => {
   const [modalProp, SetModalProp] = useState<ModalProps>();
   const [search, setSearch] = useState("");
 
-  const mobile = useMedia("(max-width: 55rem)");
+  const mobile = useMedia("(max-width: 75rem)");
 
   const filteredRepos =
     search.length > 0 ? Data.filter((data) => data.user.includes(search)) : [];
 
   return (
     <>
-      <div style={{ display:  "flex", justifyContent: "space-between" }}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <select>
           {Seasons.map((item, index) => (
             <option key={index} value={item}>
@@ -120,6 +120,14 @@ export const Table = () => {
             <th style={{ display: mobile ? "none" : "" }}>
               <div>
                 <img src={flash} alt="assistencia" /> Flashbang
+              </div>
+            </th>
+            <th style={{ display: mobile ? "none" : "" }}>
+              <div>🚀 Rounds Jogados</div>
+            </th>
+            <th style={{ display: mobile ? "none" : "" }}>
+              <div>
+                <img src={rating} /> Rating
               </div>
             </th>
           </tr>
@@ -180,10 +188,12 @@ export const Table = () => {
                   <td style={{ display: mobile ? "none" : "" }}>
                     {data.flashbang_assists}
                   </td>
-                  <td style={{ display: "none" }}>
+                  <td style={{ display: mobile ? "none" : "" }}>
                     {data.total_rounds_played}
                   </td>
-                  <td style={{ display: "none" }}>{data.rating}</td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.rating}
+                  </td>
                 </TrStyled>
               </tbody>
             ))
@@ -242,11 +252,12 @@ export const Table = () => {
                   <td style={{ display: mobile ? "none" : "" }}>
                     {data.flashbang_assists}
                   </td>
-
-                  <td style={{ display: "none" }}>
+                  <td style={{ display: mobile ? "none" : "" }}>
                     {data.total_rounds_played}
                   </td>
-                  <td style={{ display: "none" }}>{data.rating}</td>
+                  <td style={{ display: mobile ? "none" : "" }}>
+                    {data.rating}
+                  </td>
                 </TrStyled>
               </tbody>
             ))}
