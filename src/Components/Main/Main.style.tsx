@@ -7,11 +7,11 @@ interface PropMain {
 export const Mainstyled = styled.main<PropMain>`
   display: grid;
   justify-content: center;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px 1fr 325px;
   align-items: start;
   width: 100%;
   padding: 30px;
-  min-height: 650px;
+  min-height: 1080px;
   height: 100%;
 
   font-family: "Anek Malayalam", sans-serif;
@@ -40,8 +40,6 @@ export const Mainstyled = styled.main<PropMain>`
 
     option {
       padding: 10px;
-     
-      
     }
   }
 
@@ -56,6 +54,7 @@ export const Mainstyled = styled.main<PropMain>`
     transition: 0.5s;
     background: #555;
     opacity: 0.99;
+    color: #c1c0c0;
 
     &:focus {
       border: solid 2px #0480bd;
